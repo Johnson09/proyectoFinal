@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Areas
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,31 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Areas</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div class="banner-container">
+    <img src="assets/img/area.png" alt="Banner" class="banner-image">
+  </div>
+
+  <h3>
+    Registro de Areas
+  </h3>
+
+  <form>
+    <ion-item>
+      <ion-label position="floating">Coordinacion</ion-label>
+      <br>
+      <ion-input placeholder="Ciencias..."></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripcion</ion-label>
+      <br>
+      <ion-input placeholder="Ciencias Naturales"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="showLoading()">Guardar</ion-button>
+    <ion-button expand="full" color="danger">Cancelar</ion-button>
+  </form>
+
 </ion-content>
