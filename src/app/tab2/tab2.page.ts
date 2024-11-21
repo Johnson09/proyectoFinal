@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(private loadingController: LoadingController) { }
+
+  async showLoading() {
+    const loading = await this.loadingController.create({
+      message: 'Espere por favor...',
+      duration: 2000
+    });
+    await loading.present();
+  }
 
 }
