@@ -1,0 +1,17 @@
+ion-grid {
+    margin: 1rem;
+    text-align: center;
+
+    ion-row {
+        border-bottom: 1px solid #ccc;
+
+        ion-col {
+            padding: 0.5rem;
+            font-size: 0.9rem;
+
+            &:first-child {
+                font-weight: bold;
+            }
+        }
+    }
+}
