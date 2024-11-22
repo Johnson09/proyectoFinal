@@ -1,3 +1,11 @@
+#table-students {
+    display: block;
+}
+
+#list-students {
+    display: none;
+}
+
 ion-grid {
     margin: 1rem;
     text-align: center;
@@ -13,5 +21,15 @@ ion-grid {
                 font-weight: bold;
             }
         }
+    }
+}
+
+@media (max-width: 768px) {
+    #table-students {
+        display: none;
+    }
+
+    #list-students {
+        display: block;
     }
 }
