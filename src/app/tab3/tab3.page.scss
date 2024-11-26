@@ -1,0 +1,34 @@
+/* Centrar el formulario */
+ion-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120%;
+  }
+  
+  ion-card-content {
+    width: 100%;
+    max-width: 500px; /* Limita el ancho máximo del formulario */
+    padding: 5px;
+  }
+  
+  /* Personalización de los botones */
+  ion-button {
+    --background: #3880ff; /* Color de fondo del botón (azul) */
+    --color: white; /* Color del texto del botón */
+    --border-radius: 12px; /* Bordes redondeados */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  ion-button[color="medium"] {
+    --background: #f4f5f8; /* Color de fondo del botón Cancelar (gris claro) */
+    --color: #666; /* Color del texto (gris oscuro) */
+    --border-radius: 12px; /* Bordes redondeados */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  ion-button:hover {
+    --background: #007bff; /* Color del botón al pasar el mouse */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Efecto de sombra al pasar el mouse */
+  }
+  
