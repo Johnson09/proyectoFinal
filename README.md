@@ -14,11 +14,6 @@ Este es un proyecto de Ionic con Angular que utiliza Capacitor para la integraci
    cd proyectoFinal
    ```
 
-3. Instala las dependencias:
-     ```sh
-    npm install
-     ```
-
 ## Ejecución
 1. Para ejecutar la aplicación en modo desarrollo:
    ```sh
@@ -34,3 +29,10 @@ Este es un proyecto de Ionic con Angular que utiliza Capacitor para la integraci
   - src/assets/: Contiene los recursos estáticos como imágenes y fuentes.
   - src/environments/: Contiene los archivos de configuración de entorno.
   - src/theme/: Contiene los archivos de estilos globales y variables de tema.
+
+
+## Creditos
+
+- Jhon Stiven Sotelo
+- Elias Alberto Chaux
+- Diego Fernando Velasquez
