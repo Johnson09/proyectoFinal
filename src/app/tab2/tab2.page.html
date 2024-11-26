@@ -13,27 +13,35 @@
     </ion-toolbar>
   </ion-header>
 
-  <div class="banner-container">
-    <img src="assets/img/area.png" alt="Banner" class="banner-image">
-  </div>
-
   <h3>
     Registro de Areas
   </h3>
 
   <form>
     <ion-item>
-      <ion-label position="floating">Coordinacion</ion-label>
+      <ion-label position="floating">Departamentos</ion-label>
       <br>
-      <ion-input placeholder="Ciencias..."></ion-input>
+      <ion-input [(ngModel)]="coordinacion" name="coordinacion" placeholder="Ciencias..."></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Descripcion</ion-label>
       <br>
-      <ion-input placeholder="Ciencias Naturales"></ion-input>
+      <ion-input [(ngModel)]="descripcion" name="descripcion" placeholder="Ciencias Naturales"></ion-input>
     </ion-item>
-    <ion-button expand="full" (click)="showLoading()">Guardar</ion-button>
-    <ion-button expand="full" color="danger">Cancelar</ion-button>
+    <ion-button expand="full" (click)="saveArea()">Guardar</ion-button>
+    <ion-button expand="full" (click)="clearForm()"color="danger">Cancelar</ion-button>
   </form>
+
+  <h3>Areas Creadas</h3>
+  <ion-list>
+    <ion-item *ngFor="let area of areas; let i = index">
+      <ion-label>
+        <h2>{{ area.coordinacion }}</h2>
+        <p>{{ area.descripcion }}</p>
+      </ion-label>
+      <ion-button color="danger" (click)="deleteArea(i)">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" color="danger" (click)="clearAreas()">Eliminar Todos los Registros</ion-button>
 
 </ion-content>
