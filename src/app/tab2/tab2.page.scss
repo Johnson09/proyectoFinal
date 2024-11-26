@@ -8,14 +8,13 @@
     height: auto;
 }
 
-
 h3,
-form {
+form,
+ion-list,
+ion-button {
     width: 100%;
     max-width: 400px;
-    /* Tamaño fijo */
     margin: 0 auto;
-    /* Centrar horizontalmente */
     padding: 16px;
 }
 
@@ -25,7 +24,18 @@ ion-item {
 
 ion-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+@media (max-width: 600px) {
+    h3,
+    form,
+    ion-list,
+    ion-button {
+        max-width: 100%;
+        padding: 8px;
+    }
 }
