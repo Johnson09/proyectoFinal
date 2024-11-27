@@ -2,17 +2,6 @@
 
 Este es un proyecto de Ionic con Angular que utiliza LocalStorage para el almacenamiento local.
 
-## Primeros pasos:
-1. Instalar Ionic
-   ```sh
-   npm install -g @ionic/cli
-   ```
-3. Crear un proyecto
-   ```sh
-   ionic start proyectoFinal
-   ```
-
-
 ## Instalación
 
 1. Clona el repositorio:
@@ -23,6 +12,10 @@ Este es un proyecto de Ionic con Angular que utiliza LocalStorage para el almace
 2. Navega al directorio del proyecto:
    ```sh
    cd proyectoFinal
+   ```
+3. Instalar paquetes y dependencias:
+   ```sh
+   npm install
    ```
 
 ## Ejecución
