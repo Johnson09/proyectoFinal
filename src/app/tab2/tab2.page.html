@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Areas
+      materias
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,39 +9,39 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Areas</ion-title>
+      <ion-title size="large">Materias</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <h3>
-    Registro de Areas
+    Registro de Materias
   </h3>
 
   <form>
     <ion-item>
-      <ion-label position="floating">Departamentos</ion-label>
+      <ion-label position="floating">Nombre</ion-label>
       <br>
-      <ion-input [(ngModel)]="coordinacion" name="coordinacion" placeholder="Ciencias..."></ion-input>
+      <ion-input [(ngModel)]="nombre" name="nombre" placeholder="Matematicas"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Descripcion</ion-label>
       <br>
-      <ion-input [(ngModel)]="descripcion" name="descripcion" placeholder="Ciencias Naturales"></ion-input>
+      <ion-input [(ngModel)]="descripcion" name="descripcion" placeholder="Ciencias Basicas..."></ion-input>
     </ion-item>
-    <ion-button expand="full" (click)="saveArea()">Guardar</ion-button>
+    <ion-button expand="full" (click)="saveMateria()">Guardar</ion-button>
     <ion-button expand="full" (click)="clearForm()"color="danger">Cancelar</ion-button>
   </form>
 
-  <h3>Areas Creadas</h3>
+  <h3>Materias Creadas</h3>
   <ion-list>
-    <ion-item *ngFor="let area of areas; let i = index">
+    <ion-item *ngFor="let materia of materias; let i = index">
       <ion-label>
-        <h2>{{ area.coordinacion }}</h2>
-        <p>{{ area.descripcion }}</p>
+        <h2>{{ materia.nombre }}</h2>
+        <p>{{ materia.descripcion }}</p>
       </ion-label>
-      <ion-button color="danger" (click)="deleteArea(i)">Eliminar</ion-button>
+      <ion-button color="danger" (click)="deleteMateria(i)">Eliminar</ion-button>
     </ion-item>
   </ion-list>
-  <ion-button expand="full" color="danger" (click)="clearAreas()">Eliminar Todos los Registros</ion-button>
+  <ion-button expand="full" color="danger" (click)="clearMaterias()">Eliminar Todos los Registros</ion-button>
 
 </ion-content>
