@@ -7,12 +7,12 @@ import { LoadingController, AlertController } from '@ionic/angular';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  coordinacion: string = '';
+  nombre: string = '';
   descripcion: string = '';
-  areas: any[] = [];
+  materias: any[] = [];
 
   constructor(private loadingController: LoadingController, private alertController: AlertController) {
-    this.loadAreas();
+    this.loadMaterias();
   }
 
   async showLoading() {
@@ -32,43 +32,44 @@ export class Tab2Page {
     await alert.present();
   }
 
-  saveArea() {
-    if (this.coordinacion.trim() === '' || this.descripcion.trim() === '') {
+  saveMateria() {
+    if (this.nombre.trim() === '' || this.descripcion.trim() === '') {
       this.showAlert();
       return;
     }
 
-    const area = {
-      coordinacion: this.coordinacion,
+    const materia = {
+      nombre: this.nombre,
       descripcion: this.descripcion
     };
-    let areas = JSON.parse(localStorage.getItem('areas') || '[]');
-    areas.push(area);
-    localStorage.setItem('areas', JSON.stringify(areas));
+    
+    let materias = JSON.parse(localStorage.getItem('materias') || '[]');
+    materias.push(materia);
+    localStorage.setItem('materias', JSON.stringify(materias));
     this.showLoading();
-    this.loadAreas();
+    this.loadMaterias();
     this.clearForm();
   }
 
-  loadAreas() {
-    this.areas = JSON.parse(localStorage.getItem('areas') || '[]');
+  loadMaterias() {
+    this.materias = JSON.parse(localStorage.getItem('materias') || '[]');
   }
 
   clearForm() {
-    this.coordinacion = '';
+    this.nombre = '';
     this.descripcion = '';
   }
 
-  clearAreas() {
-    localStorage.removeItem('areas');
-    this.loadAreas();
+  clearMaterias() {
+    localStorage.removeItem('materias');
+    this.loadMaterias();
   }
 
-  deleteArea(index: number) {
-    let areas = JSON.parse(localStorage.getItem('areas') || '[]');
-    areas.splice(index, 1);
-    localStorage.setItem('areas', JSON.stringify(areas));
-    this.loadAreas();
+  deleteMateria(index: number) {
+    let materias = JSON.parse(localStorage.getItem('materias') || '[]');
+    materias.splice(index, 1);
+    localStorage.setItem('materias', JSON.stringify(materias));
+    this.loadMaterias();
   }
 
 }
