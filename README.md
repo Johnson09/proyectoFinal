@@ -1,6 +1,17 @@
 # Proyecto Final
 
-Este es un proyecto de Ionic con Angular que utiliza Capacitor para la integración nativa.
+Este es un proyecto de Ionic con Angular que utiliza LocalStorage para el almacenamiento local.
+
+## Primeros pasos:
+1. Instalar Ionic
+   ```sh
+   npm install -g @ionic/cli
+   ```
+3. Crear un proyecto
+   ```sh
+   ionic start proyectoFinal
+   ```
+
 
 ## Instalación
 
